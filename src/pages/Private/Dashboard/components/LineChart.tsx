@@ -26,6 +26,7 @@ interface LineProps {
   width: string
   fontSize: number
   showLabels: boolean
+  legPosition: 'top' | 'bottom'
 }
 
 export const LineChart: React.FC<LineProps> = ({
@@ -34,6 +35,7 @@ export const LineChart: React.FC<LineProps> = ({
   width,
   fontSize,
   showLabels,
+  legPosition,
 }) => {
   const labelsMonth = [
     'January',
@@ -88,12 +90,12 @@ export const LineChart: React.FC<LineProps> = ({
     plugins: {
       legend: {
         display: showLabels,
-        position: 'bottom' as const,
+        position: legPosition,
         labels: {
+          padding: 20,
           font: {
             weight: 'bold',
             size: fontSize,
-            padding: 30,
           },
         },
       },
@@ -119,8 +121,14 @@ export const LineChart: React.FC<LineProps> = ({
     },
   }
 
+  const chartStyle = {
+    height: '400px', // Establece aquí la altura deseada del gráfico
+    width: '100%', // El gráfico ocupará todo el ancho disponible
+  }
+
   return (
-    <div className={`flex h-auto ${width}`}>
+    // <div className={`flex h-[400px] ${width}`}>
+    <div style={chartStyle}>
       <Line data={dataLine} options={options} />
     </div>
   )

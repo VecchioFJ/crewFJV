@@ -42,9 +42,9 @@ export const RouterProvider: React.FC = () => {
               element={<ProjectForm />}
             />
           </Route>
-          {userId === `${adminId}` && (
-            <Route path={PrivateRoutes.dashboard} element={<Dashboard />} />
-          )}
+          {/* {userId === `${adminId}` && ( */}
+          <Route path={PrivateRoutes.dashboard} element={<Dashboard />} />
+          {/* )} */}
         </Route>
       </Routes>
     </BrowserRouter>

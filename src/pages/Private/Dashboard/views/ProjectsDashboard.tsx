@@ -178,6 +178,7 @@ export const ProjectsDashboard: React.FC = () => {
         width={'w-[800px]'}
         fontSize={20}
         showLabels={true}
+        legPosition={'top'}
       />
       {projectsInTable !== null && (
         <div className='mt-5 flex h-[440px] flex-col justify-between rounded-lg bg-backgroundDark1 p-5'>

@@ -104,16 +104,14 @@ export const ContributionsDashboard: React.FC = () => {
   const allData = [dataCom, dataCrea, dataTech]
   return (
     <div className='ml-10 flex flex-col'>
-      <h2 className='mb-8 ml-40 items-center justify-center pl-20 pt-10 text-3xl text-secondary'>
-        ContributionsDashboard
-      </h2>
-      <div className='w-[500px]'>
+      <div style={{ width: '1200px' }}>
         <LineChart
           title={title}
           data={allData}
-          width={'w-[800px]'}
-          fontSize={20}
+          width={''}
+          fontSize={18}
           showLabels={true}
+          legPosition={'top'}
         />
       </div>
     </div>

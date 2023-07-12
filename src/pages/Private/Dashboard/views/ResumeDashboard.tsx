@@ -149,6 +149,7 @@ export const ResumeDashboard: React.FC = () => {
                   width={'w-[250px]'}
                   fontSize={8}
                   showLabels={false}
+                  legPosition={'bottom'}
                 />
               </div>
             </div>
